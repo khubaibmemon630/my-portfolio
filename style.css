@@ -1,0 +1,398 @@
+
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b0b16;
+    color: #f5f5ff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 90px 10%;
+    scroll-margin-top: 70px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+/* ===== Navigation Bar ===== */
+header {
+    background: rgba(11, 11, 22, 0.95);
+    border-bottom: 1px solid #25253e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #9b8cff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    font-size: 14px;
+    color: #d0d0e0;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a99aff;
+}
+
+/* ===== Home / Hero Section ===== */
+#home {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background:
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(112, 82, 255, 0.15),
+            transparent 35%
+        );
+}
+
+#home > div:first-child {
+    flex: 1;
+}
+
+#home p:first-child {
+    color: #a99aff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#home h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.2;
+    margin: 10px 0;
+    font-weight: 800;
+    background: linear-gradient(90deg, #b5a7ff, #55d6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#home h3 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+#home p {
+    color: #b5b5ca;
+    margin-bottom: 25px;
+}
+
+#home a {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 5px 8px 5px 0;
+    border: 1px solid #8975ff;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#home a:hover {
+    background: #8975ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(137, 117, 255, 0.25);
+}
+
+#home > div:last-child {
+    flex: 0 1 300px;
+}
+
+
+
+#home img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 25px;
+    border: 3px solid #8975ff;
+    box-shadow: 0 0 35px rgba(137, 117, 255, 0.2);
+}
+
+
+
+/* Hover Effect */
+#home img:hover {
+    transform: translateY(-6px) scale(1.02);
+
+    box-shadow:
+        0 0 25px rgba(137, 117, 255, 0.45),
+        0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ===== About Section ===== */
+#about {
+    background: #111121;
+    border-top: 1px solid #24243a;
+    border-bottom: 1px solid #24243a;
+}
+
+#about p {
+    max-width: 800px;
+    color: #bdbdd0;
+    font-size: 16px;
+}
+
+/* ===== Skills Section ===== */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    list-style: none;
+}
+
+#skills li {
+    background: #151529;
+    border: 1px solid #292943;
+    border-radius: 12px;
+    padding: 22px 15px;
+    text-align: center;
+    color: #d7d2ff;
+}
+
+#skills li:hover {
+    border-color: #8975ff;
+    transform: translateY(-5px);
+    background: #1b1a35;
+}
+
+/* ===== Projects Section ===== */
+#projects {
+    background: #111121;
+    border-top: 1px solid #24243a;
+    border-bottom: 1px solid #24243a;
+}
+
+#projects > div {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.333% - 16px);
+    min-height: 160px;
+    margin: 0 12px 12px 0;
+    padding: 25px;
+    background: #17172b;
+    border: 1px solid #292943;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+#projects > div:hover {
+    transform: translateY(-6px);
+    border-color: #8975ff;
+}
+
+#projects h3 {
+    color: #b5a7ff;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+#projects p {
+    color: #bdbdd0;
+    font-size: 14px;
+}
+
+/* ===== Contact Section ===== */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    color: #bdbdd0;
+    margin: 12px 0;
+}
+
+#contact a {
+    color: #a99aff;
+}
+
+#contact a:hover {
+    color: #55d6ff;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #080811;
+    border-top: 1px solid #25253e;
+    color: #9999b0;
+    font-size: 13px;
+}
+
+/* ===== Tablet Responsive ===== */
+@media (max-width: 900px) {
+    section {
+        padding: 70px 6%;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    #home {
+        gap: 30px;
+    }
+
+    #home > div:last-child {
+        flex-basis: 240px;
+    }
+
+    #projects > div {
+        width: calc(50% - 14px);
+    }
+
+    
+#skills ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+}
+
+#skills li {
+    background: #151529;
+    border: 1px solid #292943;
+    border-radius: 8px;
+    padding: 12px 15px;
+    text-align: left;
+    color: #d7d2ff;
+}
+
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 4%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    #home {
+        min-height: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+        padding-top: 50px;
+    }
+
+    #home > div:last-child {
+        flex: auto;
+        width: 100%;
+    }
+
+    #home img {
+        max-width: 230px;
+        margin: auto;
+    }
+
+    #home h3 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    #skills ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+}
+
+#skills li {
+    background: #151529;
+    border: 1px solid #292943;
+    border-radius: 8px;
+    padding: 12px 15px;
+    text-align: left;
+    color: #d7d2ff;
+}
+
+    #skills li {
+        padding: 17px 8px;
+        font-size: 13px;
+    }
+
+    #projects > div {
+        display: block;
+        width: 100%;
+        margin: 0 0 16px;
+    }
+}
+
+
+/* Skills ko ek ke neeche ek dikhane ke liye */
+#skills ul {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+}
+
+#skills li {
+    width: 100%;
+}
